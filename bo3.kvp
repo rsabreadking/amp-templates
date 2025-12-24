@@ -1,0 +1,26 @@
+App.Name=Call of Duty Black Ops 3 (Alterware)
+App.Description=Call of Duty: Black Ops 3 Unranked Dedicated Server using the boiii client.
+App.DisplayName=BO3 Alterware
+
+# --- Application Settings ---
+App.WorkingDir=.
+App.ApplicationPort1=27017
+
+# --- Proton Configuration (Based on your text) ---
+# We use the Proton AppID (1580130 is Proton 6.3) as the Linux Executable
+App.ExecutableLinux=1580130/proton
+App.ExecutableWin=boiii.exe
+
+# Argument to run the windows executable via Proton
+App.LinuxCommandLineArgs=run {{$ExecutableWin}}
+
+# The actual game arguments
+App.CommandLineArgs=-project boiii -dedicated +set net_port {{$ApplicationPort1}}
+
+# Environment Variables required for Proton
+App.EnvironmentVariables={"LD_LIBRARY_PATH": "./linux64:%LD_LIBRARY_PATH%", "SteamAppId": "545990", "STEAM_COMPAT_DATA_PATH": "{{$FullRootDir}}1580130", "STEAM_COMPAT_CLIENT_INSTALL_PATH": "{{$FullRootDir}}1580130"}
+
+# --- Update Sources (Multi-stage download) ---
+# Stage 1: Download BO3 (Force Windows)
+# Stage 2: Download Proton (Linux)
+App.UpdateSources=[{"UpdateStageName": "Download BO3 Server","UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "545990", "ForceDownloadPlatform": "Windows"},{"UpdateStageName": "Download Proton","UpdateSourcePlatform": "Linux", "UpdateSource": "SteamCMD", "UpdateSourceData": "1580130"}]
