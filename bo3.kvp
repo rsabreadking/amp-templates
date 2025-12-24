@@ -1,9 +1,10 @@
-AppConfigId=990970a0-0000-0000-0000-000000000001
-DisplayName=BO3 Alterware
-Description=Host a Black Ops 3 server using the boiii client (Alterware).
-OS=3
-DisplayImageSource=steam:545990
-Author=You
+GenericModule.Meta.AppConfigId=990970a0-0000-0000-0000-000000000001
+GenericModule.Meta.DisplayName=BO3 Alterware
+GenericModule.Meta.Description=Host a Black Ops 3 server using the boiii client (Alterware).
+GenericModule.Meta.OS=3
+GenericModule.Meta.DisplayImageSource=steam:545990
+GenericModule.Meta.Author=You
+
 App.Name=BO3 Alterware
 App.WorkingDir=.
 App.ApplicationPort1=27017
