@@ -1,8 +1,13 @@
-App.Name=Call of Duty Black Ops 3 (Alterware)
-App.Description=Call of Duty: Black Ops 3 Unranked Dedicated Server using the boiii client.
-App.DisplayName=BO3 Alterware
+# --- Required Metadata ---
+DisplayName=BO3 Alterware
+Description=Host a Black Ops 3 server using the boiii client (Alterware).
+AppConfigId=990970a0-0000-0000-0000-000000000001
+OS=3
+DisplayImageSource=steam:545990
+Author=You
 
 # --- Application Settings ---
+App.Name=BO3 Alterware
 App.WorkingDir=.
 App.ApplicationPort1=27017
 
