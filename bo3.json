@@ -1,0 +1,8 @@
+{
+  "DisplayName": "BO3 Alterware",
+  "Description": "Host a BO3 server using the boiii (Alterware) client.",
+  "Category": "Call of Duty",
+  "ConfigVersion": 1,
+  "ReleaseDate": "2025-01-01",
+  "SteamAppId": 545990
+}
