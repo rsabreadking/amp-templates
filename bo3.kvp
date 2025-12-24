@@ -1,22 +1,15 @@
-# --- Required Metadata ---
+AppConfigId=990970a0-0000-0000-0000-000000000001
 DisplayName=BO3 Alterware
 Description=Host a Black Ops 3 server using the boiii client (Alterware).
-AppConfigId=990970a0-0000-0000-0000-000000000001
 OS=3
 DisplayImageSource=steam:545990
 Author=You
-
-# --- Application Settings ---
 App.Name=BO3 Alterware
 App.WorkingDir=.
 App.ApplicationPort1=27017
-
-# --- Proton Configuration ---
 App.ExecutableLinux=1580130/proton
 App.ExecutableWin=boiii.exe
 App.LinuxCommandLineArgs=run {{$ExecutableWin}}
 App.CommandLineArgs=-project boiii -dedicated +set net_port {{$ApplicationPort1}}
 App.EnvironmentVariables={"LD_LIBRARY_PATH": "./linux64:%LD_LIBRARY_PATH%", "SteamAppId": "545990", "STEAM_COMPAT_DATA_PATH": "{{$FullRootDir}}1580130", "STEAM_COMPAT_CLIENT_INSTALL_PATH": "{{$FullRootDir}}1580130"}
-
-# --- Update Sources ---
 App.UpdateSources=[{"UpdateStageName": "Download BO3 Server","UpdateSourcePlatform": "All", "UpdateSource": "SteamCMD", "UpdateSourceData": "545990", "ForceDownloadPlatform": "Windows"},{"UpdateStageName": "Download Proton","UpdateSourcePlatform": "Linux", "UpdateSource": "SteamCMD", "UpdateSourceData": "1580130"}]
